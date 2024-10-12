@@ -223,7 +223,7 @@ header .contenedor-texto .texto .profesion{
 
 .slider-container img {
   flex: 0 0 100%;
-  width: 100%;
+  width: 89%;
   object-fit: cover;
 
   /* Vamos a añadir esto 👇 */
