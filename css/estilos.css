@@ -307,7 +307,16 @@ footer .redes-sociales a{
 
 }
 
+@media screen and (max-width: 600px){
+	header .menu{
+		justify-content: center;
+	}
+	.main .trabajos .contenedor-trabajos .trabajo{
+		width: 80%;
 
+	}
+
+}
 
 
 
