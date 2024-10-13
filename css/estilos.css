@@ -213,6 +213,10 @@ header .contenedor-texto .texto .profesion{
 	vertical-align: top;
 }
 
+hover:.main .trabajos .contenedor-trabajos .trabajo .thumb img{
+	width: 120%;
+	vertical-align: top;
+}
 
 
 
