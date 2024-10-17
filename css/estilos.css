@@ -310,12 +310,17 @@ footer .redes-sociales a{
 }
 /*---------mediaqueries-------*/
 
+
 @media screen and (max-width: 800px){
 	header .menu{
 		justify-content: center;
 	}
 	.main .trabajos .contenedor-trabajos .trabajo{
-		width: 46%;
+		width: 100%;
+
+	}
+	.main .trabajos .contenedor-trabajos .trabajo:hover{
+		width: 100%;
 
 	}
 	.main .acerca-de .texto .titulo{
@@ -326,10 +331,6 @@ footer .redes-sociales a{
 		font-weight: 300;
 		color: #fff988;
 	}
-
-}
-
-
 
 
 
