@@ -318,6 +318,14 @@ footer .redes-sociales a{
 		width: 46%;
 
 	}
+	.main .acerca-de .texto .titulo{
+		font-size: 1.8em;
+		font-weight: 900;
+		line-height: 34px;
+		margin-bottom: 10px;
+		font-weight: 300;
+		color: #fff988;
+	}
 
 }
 
