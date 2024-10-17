@@ -141,11 +141,19 @@ header .contenedor-texto .texto .profesion{
 }
 .main .acerca-de{
 	text-align: center;
+	background-image: url(../img/bcg.jpg);
+	background-size:cover;
+	background-attachment: fixed;
 	
 }
 
 .main .acerca-de .foto{
 	margin-top: -60px;
+}
+.main .acerca-de .foto img:hover{
+	
+	width: 200px;
+	transition: 300ms;
 }
 
 .main .acerca-de .foto img{
@@ -155,16 +163,17 @@ header .contenedor-texto .texto .profesion{
 }
 
 .main .acerca-de .texto {
-	color: #5a5a5a;
-	font-weight: 200;
-	font-size: 1em;
+	color: #ffffff;
+	font-weight: 300;
+	font-size: 2em;
 	line-height: 50px;
 	width: 80%;
 	margin: 20px auto 60px auto;
 } 
 
 .main .acerca-de .texto .titulo{
-	font-size: 34px;
+	font-size: 3em;
+	font-weight: 900;
 	line-height: 34px;
 	margin-bottom: 10px;
 	font-weight: 300;
@@ -213,13 +222,10 @@ header .contenedor-texto .texto .profesion{
 	vertical-align: top;
 }
 
-.main .trabajos .contenedor-trabajos .trabajo .thumb img:hover{
-	width: 150%;
+.main .trabajos .contenedor-trabajos .trabajo:hover{
+	width: 40%;
 	vertical-align: top;
 }
-
-
-
 
 /*------footer-----*/
 
@@ -309,23 +315,13 @@ footer .redes-sociales a{
 		justify-content: center;
 	}
 	.main .trabajos .contenedor-trabajos .trabajo{
-		width: 76%;
+		width: 46%;
 
 	}
 
 }
 
-@media screen and (max-width:700px){
-	header .menu{
-		justify-content: center;
-	}
-	.main .trabajos .contenedor-trabajos .trabajo{
-		width: 9
-    0%;
 
-	}
-
-}
 
 
 
