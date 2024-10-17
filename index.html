@@ -6,7 +6,7 @@
 	<title>protafolio David flores</title>
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Handjet:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,500;1,700;1,900&display=swap" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="css/normalize.css">
 <link rel="stylesheet" type="text/css" href="css/font-awesome.css">
 <link rel="stylesheet" type="text/css" href="css/estilos.css">
@@ -16,16 +16,19 @@
 	<header >
 		<div class="contenedor">
 			<nav class="menu">
-			    <button><span class="text"><a href="https://www.youtube.com/watch?v=6f8x5uTfS4M">acerca de</a></span></button>
-			    <button><span class="text"><a href="#">trabajos</a></span></button>
-			    <button><span class="text"><a href="https://www.facebook.com/dave.perrodeguerra">contactos</a></span></button>
+			    <button><span class="text"><a href="#acercade">acerca de</a></span></button>
+			    <button><span class="text"><a href="#trab">trabajos</a></span></button>
+			    <button><span class="text"><a href="#contacto">contactos</a></span></button>
 			    
 				
 			</nav>
 			<div class="contenedor-texto">
 				<div class="texto">
-					<h1 class="nombre">Marcos David</h1>
-					<h2 class="profesion">Diseñador Grafico y Web</h2>
+					
+					<section id="home" class="hero">
+						<h1>Marcos David</h1>
+						<p id="typing-text"></p>
+					</section>
 
 				</div>
 			</div>
@@ -33,21 +36,21 @@
 	</header>
     <section class="main">
     	<section class="acerca-de">
-    		<div class="contenedor">
+    	  <div class="contenedor">
     			<div class="foto">
-    			<img src="img/perfil.png" width="115">
-    		</div>
+    				<img src="img/perfil.png" width="115">
+    		    </div>
     		<div class="texto">
-    			<h3 class="titulo">Acerca de</h3>
-    			<p>SIG <span class="bold">MUNDUS </span> CREATUS EST.
+    			<h3 id="acercade" class="titulo">Acerca de</h3>
+    			<p class="">Desarrollamos <spam class="bold"> sitios web</spam>  atractivos y funcionales que reflejan la identidad de tu marca.
     			</p>
     			
     			
     		</div>
-    		</div>
+    	  </div>
     	</section>
-    	<section class="trabajos">
-    		<div class="contenedor">
+    	<section  class="trabajos">
+    		<div id="trab" class="contenedor">
     			<h3 class="titulo">Trabajos</h3>
     			<div class="contenedor-trabajos">
     				<div class="trabajo">
@@ -122,14 +125,13 @@
     		</div>
     	</section>
     </section>
-
-
+    
     <footer>
       <section class="contacto">
     	
     	<div class="contenedor">
     
-            <h3 class="titulo">Contacto</h3>
+            <h3 id="contacto" class="titulo">Contacto</h3>
     	     <form class="formulario">
     		  <input type="text" placeholder="nombre" name="nombre" required>
     		  <input type="email" placeholder="correo" name="correo" required>
@@ -149,7 +151,36 @@
        </section>
     </footer>
 <script type="text/javascript">
-	alert ('esta es una pagina de demostracion hecha por marcos Flores Carrillo (el dave)');
+	const typingText = document.getElementById('typing-text');
+ const phrases = ['Diseñador Web', 'Desarrollador Frontend', 'Creativo', 'diseño grafico' ];
+ let phraseIndex = 0;
+ let charIndex = 0;
+ let isDeleting = false;
+
+ function typeEffect() {
+     const currentPhrase = phrases[phraseIndex];
+
+     if (isDeleting) {
+         typingText.textContent = currentPhrase.substring(0, charIndex - 1);
+         charIndex--;
+     } else {
+         typingText.textContent = currentPhrase.substring(0, charIndex + 1);
+         charIndex++;
+     }
+
+     if (!isDeleting && charIndex === currentPhrase.length) {
+         isDeleting = true;
+         setTimeout(typeEffect, 1500);
+     } else if (isDeleting && charIndex === 0) {
+         isDeleting = false;
+         phraseIndex = (phraseIndex + 1) % phrases.length;
+         setTimeout(typeEffect, 500);
+     } else {
+         setTimeout(typeEffect, isDeleting ? 50 : 100);
+     }
+ }
+
+ typeEffect();
 </script>
 </body>
 </html>
