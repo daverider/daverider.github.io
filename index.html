@@ -49,7 +49,8 @@
     		</div>
     	  </div>
     	</section>
-    	<section  class="trabajos">
+    	<!--
+		<section  class="trabajos">
     		<div id="trab" class="contenedor">
     			<h3 class="titulo">Trabajos</h3>
     			<div class="contenedor-trabajos">
@@ -123,8 +124,67 @@
     				</div>
     			</div>
     		</div>
-    	</section>
+    	</section>  -->
     </section>
+	<div id="trab" class="galeriacontenedor">
+		<h2 class="trabajosh2">Trabajos</h2>
+		<div class="gallery">
+			
+			<div class="gallery-item">
+				<img src="img/1.png" alt="Imagen 1" data-description="diseño que se realizo para marca warext 
+				<br> incluye logo y manejo de la marca asi commo manual de uso
+				<br>tanto en colores tipografias y modos en los que se puede emplear su logotipo ">
+				<div class="description">identidad corporativa para marca warext  </div>
+			</div>
+			<div class="gallery-item">
+				<img src="img/2.png" alt="Imagen 2" data-description="Descripción de la imagen 2. Aquí vemos un retrato impresionante.">
+				<div class="description">Descripción de la imagen 2. Aquí vemos un retrato impresionante.</div>
+			</div>
+			<div class="gallery-item">
+				<img src="img/3.png" alt="Imagen 3" data-description="Descripción de la imagen 3. Esta foto captura un momento único en la naturaleza.">
+				<div class="description">Descripción de la imagen 3. Esta foto captura un momento único en la naturaleza.</div>
+			</div>
+			<div class="gallery-item">
+				<img src="img/4.png" alt="Imagen 4" data-description="Descripción de la imagen 4. Una escena urbana llena de vida y color.">
+				<div class="description">Descripción de la imagen 4. Una escena urbana llena de vida y color.</div>
+			</div>
+			<div class="gallery-item">
+				<img src="img/5.png" alt="Imagen 5" data-description="Descripción de la imagen 5. Un ejemplo de fotografía abstracta moderna.">
+				<div class="description">Descripción de la imagen 5. Un ejemplo de fotografía abstracta moderna.</div>
+			</div>
+			<div class="gallery-item">
+				<img src="img/6.png" alt="Imagen 6" data-description="Descripción de la imagen 6. Esta imagen muestra la belleza de la arquitectura clásica.">
+				<div class="description">Descripción de la imagen 6. Esta imagen muestra la belleza de la arquitectura clásica.</div>
+			</div>
+			<div class="gallery-item">
+				<img src="img/7.png" alt="Imagen 6" data-description="Descripción de la imagen 6. Esta imagen muestra la belleza de la arquitectura clásica.">
+				<div class="description">Descripción de la imagen 6. Esta imagen muestra la belleza de la arquitectura clásica.</div>
+			</div>
+			<div class="gallery-item">
+				<img src="img/8.png" alt="Imagen 5" data-description="Descripción de la imagen 5. Un ejemplo de fotografía abstracta moderna.">
+				<div class="description">Descripción de la imagen 5. Un ejemplo de fotografía abstracta moderna.</div>
+			</div>
+			<div class="gallery-item">
+				<img src="img/9.png" alt="Imagen 6" data-description="Descripción de la imagen 6. Esta imagen muestra la belleza de la arquitectura clásica.">
+				<div class="description">Descripción de la imagen 6. Esta imagen muestra la belleza de la arquitectura clásica.</div>
+			</div>
+			<div class="gallery-item">
+				<img src="img/bg.jpg" alt="Imagen 6" data-description="Descripción de la imagen 6. Esta imagen muestra la belleza de la arquitectura clásica.">
+				<div class="description">Descripción de la imagen 6. Esta imagen muestra la belleza de la arquitectura clásica.</div>
+			</div>
+			
+			
+			
+
+		</div>	
+	</div>
+	
+
+    <div id="myModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="img01">
+        <div id="caption" class="modal-description"></div>
+    </div>
     
     <footer>
       <section class="contacto">
@@ -151,6 +211,33 @@
        </section>
     </footer>
 <script type="text/javascript">
+
+var modal = document.getElementById("myModal");
+        var modalImg = document.getElementById("img01");
+        var captionText = document.getElementById("caption");
+        var galleryItems = document.getElementsByClassName("gallery-item");
+
+        for (var i = 0; i < galleryItems.length; i++) {
+            galleryItems[i].onclick = function() {
+                modal.style.display = "block";
+                modalImg.src = this.getElementsByTagName('img')[0].src;
+                captionText.innerHTML = this.getElementsByTagName('img')[0].getAttribute('data-description');
+            }
+        }
+
+        var span = document.getElementsByClassName("close")[0];
+
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+
+
 	const typingText = document.getElementById('typing-text');
  const phrases = ['Diseñador Web', 'Desarrollador Frontend', 'Creativo', 'diseño grafico' ];
  let phraseIndex = 0;
